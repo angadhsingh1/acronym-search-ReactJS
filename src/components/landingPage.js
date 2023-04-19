@@ -1,21 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Checkbox, Form, Table } from 'semantic-ui-react'
+import { Button, Checkbox, Form, Table, Search } from 'semantic-ui-react'
 import axios from 'axios';
 
 import SearchBar from "./SearchBar";
 import SearchBB from "./SearchBB";
+import Results from "./results";
+
 import { Link } from 'react-router-dom';
 
 
 export default function Create() {
     const [acronym, setAcronyms] = useState('');
     const [acronymsDefinition, setAcronymsDefinition] = useState('');
-    const postData = () => {
-        axios.post("https://643adf0590cd4ba56303ed71.mockapi.io/acronyms", {
-            acronym,
-            acronymsDefinition
-        })
-    }
 
     const [APIData, setAPIData] = useState([]);
     useEffect(() => {
@@ -37,19 +33,8 @@ export default function Create() {
     return (
         
         <div>
-            <Form className="create-form">
-                <Form.Field>
-                    <input placeholder='Search Acronyms' onChange={(e) => setAcronyms(e.target.value)}/>
-                </Form.Field>
-                <Button onClick={postData} type='Search'>Search</Button>
-        
-                <Link to='/read'>
-                    <Button>New Acronym</Button>
-                </Link>
-
-                {/* <SearchBar /> */}
-                <SearchBB />
-            </Form>
+            <h2 className="main-header">Welcome!</h2>
+            <SearchBB />
         </div>
         
     );

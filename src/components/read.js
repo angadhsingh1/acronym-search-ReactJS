@@ -29,17 +29,16 @@ export default function Read() {
 
     const onDelete = (id) => {
         axios.delete(`https://643adf0590cd4ba56303ed71.mockapi.io/acronyms/${id}`)
-        .then(() => {
+          .then(() => {
             getData();
-        })
-    }
+          })
+      }
 
     return (
         <div>
             <Table singleLine>
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>Acronym Id</Table.HeaderCell>
                         <Table.HeaderCell>Acronym</Table.HeaderCell>
                         <Table.HeaderCell>Definition</Table.HeaderCell>
                         <Table.HeaderCell>Update</Table.HeaderCell>
@@ -50,18 +49,17 @@ export default function Read() {
                 <Table.Body>
                     {APIData.map((data) => {
                         return (
-                            <Table.Row>
-                                <Table.Cell>{data.acronymId}</Table.Cell>
-                                <Table.Cell>{data.acronym}</Table.Cell>
-                                <Table.Cell>{data.acronymsDefinition}</Table.Cell>
-                                <Link to='/update'>
-                                    <Table.Cell> 
-                                        <Button onClick={() => setData(data)}>Update</Button>
-                                    </Table.Cell>
-                                </Link>
-                                <Table.Cell>
-                                    <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                            <Table.Row key={data.acronymId}>
+                            <Table.Cell>{data.acronym}</Table.Cell>
+                            <Table.Cell>{data.acronymsDefinition}</Table.Cell>
+                            <Link to='/update'>
+                                <Table.Cell> 
+                                <Button onClick={() => setData(data)}>Update</Button>
                                 </Table.Cell>
+                            </Link>
+                            <Table.Cell>
+                                <Button onClick={() => onDelete(data.acronymId)}>Delete</Button>
+                            </Table.Cell>
                             </Table.Row>
                         )
                     })}
@@ -70,3 +68,4 @@ export default function Read() {
         </div>
     )
 }
+
