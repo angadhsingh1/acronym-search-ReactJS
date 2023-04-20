@@ -13,6 +13,6 @@ Follow the steps below to install the Acronym Manager web application:
 
 ## Sources
 
-https://www.freecodecamp.org/news/how-to-perform-crud-operations-using-react/
-https://react.semantic-ui.com/modules/search/
-https://dev.to/franciscomendes10866/how-to-create-a-search-bar-in-react-58nj
+1. https://www.freecodecamp.org/news/how-to-perform-crud-operations-using-react/
+2. https://react.semantic-ui.com/modules/search/
+3. https://dev.to/franciscomendes10866/how-to-create-a-search-bar-in-react-58nj
