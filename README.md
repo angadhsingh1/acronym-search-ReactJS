@@ -6,7 +6,7 @@ The Acronym Manager is a web-based application designed to manage acronyms by al
 
 Follow the steps below to install the Acronym Manager web application:
 
-1. Clone the repository from GitHub by entering the following command: `git clone 'https://github.com/angadhsingh1/acronym-search-ReactJS.git`
+1. Clone the repository from GitHub by entering the following command: `git clone https://github.com/angadhsingh1/acronym-search-ReactJS.git`
 2. Navigate to the project directory by typing: `cd acronym-search-ReactJS`
 3. Install the required dependencies using either npm or yarn: `npm install` or `yarn install`
 4. Starts the server to serve the built application: `npm run start` or `yarn start`
